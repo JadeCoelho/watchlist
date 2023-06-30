@@ -11,8 +11,15 @@
       "name": "test",
       "category": "Documentário",
       "status": "Não assistido",
-      "review": "2",
+      "review": "4",
       "id": 2
+    },
+    {
+      "name": "adding new movie",
+      "category": "Filme",
+      "status": "Assistindo",
+      "review": "4",
+      "id": 3
     }
   ]
 }

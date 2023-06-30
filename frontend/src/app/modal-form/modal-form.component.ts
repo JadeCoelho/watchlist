@@ -19,6 +19,7 @@ export class ModalFormComponent {
   form!: FormGroup;
   item!: Item;
   id = this.route.snapshot.paramMap.get('id');
+  hidden: boolean = false
 
   constructor(
     private router: Router,
@@ -63,20 +64,24 @@ export class ModalFormComponent {
     if (this.id) {
       this.itemsService.updateItem(this.item).subscribe({
         next: () =>
-          this.msgService.setMsg('Item editado com sucesso!', 'var(--success'),
+          this.msgService.setMsg('Item editado com sucesso!', 'var(--success)'),
         error: () =>
-          this.msgService.setMsg('Erro ao editar item', 'var(--error'),
+          this.msgService.setMsg('Erro ao editar item', 'var(--error)'),
         complete: () => this.cancel(),
       });
     } else {
       this.itemsService.createItem(this.item).subscribe({
         next: () =>
-          this.msgService.setMsg('Item criado com sucesso!', 'var(--success'),
+          this.msgService.setMsg('Item criado com sucesso!', 'var(--success)'),
         error: () =>
-          this.msgService.setMsg('Erro ao criar item', 'var(--error'),
+          this.msgService.setMsg('Erro ao criar item', 'var(--error)'),
         complete: () => this.cancel(),
       });
     }
+
+    this.hidden = true
+    console.log(this.item);
+
   }
 
   noWhitespaceValidator(control: FormControl) {

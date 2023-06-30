@@ -10,7 +10,6 @@ import { Item } from '../item';
 })
 export class TableComponent implements OnInit {
   items: Item[] = [];
-  stars: string = '';
   constructor(private itemService: ItemService, private router: Router) {}
 
   ngOnInit(): void {

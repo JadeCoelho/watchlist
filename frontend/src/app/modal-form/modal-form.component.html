@@ -1,5 +1,5 @@
 <div class="modal">
-  <div class="modal-form">
+  <div class="modal-form" *ngIf="!hidden; else redirect">
     <form action="" [formGroup]="form">
       <div class="modal-field">
         <label for="name">Nome*</label>
@@ -51,4 +51,5 @@
       </button>
     </div>
   </div>
+  <ng-template #redirect>Redirecionando...</ng-template>
 </div>
