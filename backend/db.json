@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "name": "Fullmetal Alchemist Brotherhood",
+      "category": "Anime",
+      "status": "Assistido",
+      "review": 5,
+      "id": 1
+    },
+    {
+      "name": "test",
+      "category": "Documentário",
+      "status": "Não assistido",
+      "review": "2",
+      "id": 2
+    }
+  ]
+}

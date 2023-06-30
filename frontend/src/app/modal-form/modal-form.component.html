@@ -1,0 +1,54 @@
+<div class="modal">
+  <div class="modal-form">
+    <form action="" [formGroup]="form">
+      <div class="modal-field">
+        <label for="name">Nome*</label>
+        <input
+          type="text"
+          class="form-field"
+          id="name"
+          formControlName="name"
+        />
+      </div>
+      <div class="modal-field">
+        <label for="category">Categoria*</label>
+        <select class="form-field" id="category" formControlName="category">
+          <option value="" disabled selected>Categoria</option>
+          <option value="Filme">Filme</option>
+          <option value="Série">Série</option>
+          <option value="Anime">Anime</option>
+          <option value="Documentário">Documentário</option>
+          <option value="Outro">Outro</option>
+        </select>
+      </div>
+      <div class="modal-field">
+        <label for="status">Status*</label>
+        <select class="form-field" id="status" formControlName="status">
+          <option value="" disabled selected>Status</option>
+          <option value="Não assistido">Não assistido</option>
+          <option value="Assistindo">Assistindo</option>
+          <option value="Assistido">Assistido</option>
+        </select>
+      </div>
+      <div class="modal-field">
+        <label for="review">Avaliação</label>
+        <select class="form-field" id="review" formControlName="review">
+          <option value="" disabled selected>Avaliação</option>
+          <option value="0">Nenhuma</option>
+          <option value="1">1 estrela</option>
+          <option value="2">2 estrelas</option>
+          <option value="3">3 estrelas</option>
+          <option value="4">4 estrelas</option>
+          <option value="5">5 estrelas</option>
+        </select>
+      </div>
+    </form>
+    <p *ngIf="form.invalid">Por favor, preencha os campos com * corretamente</p>
+    <div class="btns-form">
+      <button class="btn btn-cancel" (click)="cancel()">Cancelar</button>
+      <button class="btn btn-save" (click)="save(form)" *ngIf="!form.invalid">
+        Salvar
+      </button>
+    </div>
+  </div>
+</div>

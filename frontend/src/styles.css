@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  outline: none;
+  border-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --primary-color: #6258d0;
+  --secondary-color: #685fc97d;
+  --shadow-color: #191717dc;
+  --text-color: #eee;
+  --bg-color: #1d202d;
+  --bg-table: #25293b;
+  --default: #323544;
+  --star: #ddc700;
+  --btn: #e97406fc;
+  --btn-delete: #e91906fc;
+  --success: #aee5cd;
+  --error: #ea9ca3;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+button {
+  color: var(--text-color);
+  margin: 0.2rem;
+}
+
+button:hover {
+  filter: brightness(90%);
+}
+
+.btn {
+  padding: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-add,
+.btn-edit,
+.btn-save {
+  background-color: var(--btn);
+}
+.btn-delete {
+  background-color: var(--btn-delete);
+}
+.btn-cancel {
+  background-color: var(--secondary-color);
+}

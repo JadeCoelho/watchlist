@@ -1,0 +1,17 @@
+.copyright{
+  position: absolute;
+  bottom: 0;
+  color: var(--text-color);
+  font-size: .9rem;
+  margin: 1rem;
+  font-weight: lighter;
+}
+
+.copyright span{
+  color: var(--btn);
+}
+
+.copyright a{
+  color: var(--primary-color);
+  font-weight: 500;
+}
